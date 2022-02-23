@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dataListCl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/leftPositionTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="leftPosition : "
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            />
+
+        <TextView
+            android:id="@+id/rightPositionTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="rightPosition : "
+            app:layout_constraintTop_toTopOf="@id/leftPositionTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            />
+
+        <TextView
+            android:id="@+id/leftVelocityTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="leftVelocity : "
+            app:layout_constraintTop_toBottomOf="@id/leftPositionTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            />
+
+        <TextView
+            android:id="@+id/rightVelocityTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="rightVelocity : "
+            app:layout_constraintTop_toTopOf="@id/leftVelocityTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            />
+
+        <TextView
+            android:id="@+id/leftLoadCell1Tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="leftLoadCell1 : "
+            app:layout_constraintTop_toBottomOf="@id/leftVelocityTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            />
+
+        <TextView
+            android:id="@+id/rightLoadCell1Tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="rightLoadCell1 : "
+            app:layout_constraintTop_toTopOf="@id/leftLoadCell1Tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            />
+
+        <TextView
+            android:id="@+id/leftLoadCell2Tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="leftLoadCell2 : "
+            app:layout_constraintTop_toBottomOf="@id/leftLoadCell1Tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            />
+
+        <TextView
+            android:id="@+id/rightLoadCell2Tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="rightLoadCell2 : "
+            app:layout_constraintTop_toTopOf="@id/leftLoadCell2Tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            />
+
+        <TextView
+            android:id="@+id/operStatusTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="operStatus : "
+            app:layout_constraintTop_toBottomOf="@id/leftLoadCell2Tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            />
+
+        <TextView
+            android:id="@+id/modeOperStatusTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="modeOperStatus : "
+            app:layout_constraintTop_toTopOf="@id/operStatusTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            />
+
+        <TextView
+            android:id="@+id/operModeTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="operMode : "
+            app:layout_constraintTop_toBottomOf="@id/operStatusTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            />
+
+        <TextView
+            android:id="@+id/workoutStatusTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="workoutStatus : "
+            app:layout_constraintTop_toTopOf="@id/operModeTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            />
+
+        <TextView
+            android:id="@+id/distanceTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="distance : "
+            app:layout_constraintTop_toBottomOf="@id/operModeTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ConnectBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ConnectBt!"
+        android:background="#00FF00"
+        app:layout_constraintTop_toBottomOf="@id/dataListCl"
+        app:layout_constraintBottom_toTopOf="@id/OperationalBt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/OperationalBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OperationalBt!"
+        app:layout_constraintTop_toBottomOf="@id/ConnectBt"
+        app:layout_constraintBottom_toTopOf="@id/ClimberBt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ClimberBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ClimberBt!"
+        app:layout_constraintTop_toBottomOf="@id/OperationalBt"
+        app:layout_constraintBottom_toTopOf="@id/StartBt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/AutoClimberBt" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/AutoClimberBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AutoClimberBt!"
+        app:layout_constraintTop_toTopOf="@id/ClimberBt"
+        app:layout_constraintBottom_toBottomOf="@id/ClimberBt"
+        app:layout_constraintStart_toEndOf="@id/ClimberBt"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/StartBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="StartBt!"
+        android:background="#00FF00"
+        app:layout_constraintTop_toBottomOf="@id/ClimberBt"
+        app:layout_constraintBottom_toTopOf="@id/radioGroup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/StartBt"
+        app:layout_constraintBottom_toTopOf="@id/numberPicker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05">
+
+        <RadioButton
+            android:id="@+id/loadBt"
+            android:layout_weight="1"
+            android:text="Load"
+            android:checked="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/speedBt"
+            android:layout_weight="1"
+            android:text="Speed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/viscousBt"
+            android:layout_weight="1"
+            android:text="Viscous"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/strokeBt"
+            android:layout_weight="1"
+            android:text="Stroke"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/repeatBt"
+            android:layout_weight="1"
+            android:text="repeat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/loadTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="load : "
+        app:layout_constraintTop_toTopOf="@id/numberPicker"
+        app:layout_constraintBottom_toTopOf="@id/speedTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/numberPicker"/>
+
+    <TextView
+        android:id="@+id/speedTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="speed : "
+        app:layout_constraintTop_toBottomOf="@id/loadTv"
+        app:layout_constraintBottom_toTopOf="@id/viscousTv"
+        app:layout_constraintStart_toStartOf="@id/loadTv"
+        app:layout_constraintEnd_toEndOf="@id/loadTv"/>
+
+    <TextView
+        android:id="@+id/viscousTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="viscous : "
+        app:layout_constraintTop_toBottomOf="@id/speedTv"
+        app:layout_constraintBottom_toTopOf="@id/strokeTv"
+        app:layout_constraintStart_toStartOf="@id/loadTv"
+        app:layout_constraintEnd_toEndOf="@id/loadTv"/>
+
+    <TextView
+        android:id="@+id/strokeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stroke : "
+        app:layout_constraintTop_toBottomOf="@id/viscousTv"
+        app:layout_constraintBottom_toTopOf="@id/repeatTv"
+        app:layout_constraintStart_toStartOf="@id/loadTv"
+        app:layout_constraintEnd_toEndOf="@id/loadTv"/>
+
+    <TextView
+        android:id="@+id/repeatTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="repeat : "
+        app:layout_constraintTop_toBottomOf="@id/strokeTv"
+        app:layout_constraintBottom_toBottomOf="@id/numberPicker"
+        app:layout_constraintStart_toStartOf="@id/loadTv"
+        app:layout_constraintEnd_toEndOf="@id/loadTv"/>
+
+    <NumberPicker
+        android:id="@+id/numberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/loadTv"
+        app:layout_constraintEnd_toStartOf="@id/plusBt"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/plusBt"
+        android:text="Plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/numberPicker"
+        app:layout_constraintBottom_toTopOf="@id/minusBt"
+        app:layout_constraintStart_toEndOf="@id/numberPicker"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/minusBt"
+        android:text="Minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/plusBt"
+        app:layout_constraintBottom_toBottomOf="@id/numberPicker"
+        app:layout_constraintStart_toStartOf="@id/plusBt"
+        app:layout_constraintEnd_toEndOf="@id/plusBt"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
